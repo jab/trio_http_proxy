@@ -1,0 +1,3 @@
+# https://docs.pylint.org/en/latest/technical_reference/features.html
+[MESSAGES CONTROL]
+disable=line-too-long,missing-docstring
