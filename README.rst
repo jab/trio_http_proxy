@@ -4,7 +4,7 @@ trio_http_proxy.py
 Simple HTTP CONNECT proxy implemented with
 `Trio <https://trio.readthedocs.io>`__.
 
-Tested with Python 3.7 and Trio 0.11.0
+Tested with Python 3.8 and Trio 0.17.0
 (but other versions probably work too).
 
 
