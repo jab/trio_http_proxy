@@ -6,6 +6,7 @@
 #
 async-generator==1.10     # via trio
 attrs==20.2.0             # via trio
+h11==0.10.0               # via -r requirements.in
 idna==2.10                # via trio
 outcome==1.0.1            # via trio
 sniffio==1.1.0            # via trio
