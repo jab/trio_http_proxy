@@ -20,7 +20,6 @@ import trio
 
 DEFAULT_PORT = 8080
 PORT = int(getenv('PORT', DEFAULT_PORT))
-OK_CONNECT_PORTS = {443, 8443}
 
 prn = partial(print, end='')
 indented = partial(indent, prefix='  ')
@@ -88,7 +87,6 @@ async def process_as_connect_request(stream, bufmaxsz=DEFAULT_BUFFER_SIZE, maxre
     assert h11_nextevt.method == b'CONNECT', f'{h11_nextevt.method=} != CONNECT'
     desthost, _, destport = h11_nextevt.target.partition(b':')
     destport = int(destport.decode())
-    assert destport in OK_CONNECT_PORTS, f'{destport=} not in {OK_CONNECT_PORTS}'
     return desthost.decode(), destport
 
 
