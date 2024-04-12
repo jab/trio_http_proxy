@@ -4,7 +4,7 @@ trio_http_proxy.py
 Simple HTTP CONNECT proxy implemented with
 `Trio <https://trio.readthedocs.io>`__.
 
-Tested with Python 3.8 and Trio 0.17.0
+Tested with Python 3.12 and Trio 0.25.0
 (but other versions probably work too).
 
 
@@ -46,11 +46,12 @@ Why
 Instructions
 ------------
 
-#. Install Trio if you haven't already.
+#. Install Trio and h11 if you haven't already.
 
    .. code-block::
 
-      pip install trio
+      uv venv .venv  # create a virtualenv (recommended)
+      uv pip install -r requirements-lock.txt  # install dependencies
 
 #. In one shell session, run this script to start the proxy on port 8080:
 
